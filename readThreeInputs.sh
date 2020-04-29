@@ -7,7 +7,7 @@ exp2=$(($a*$b+$c))
 exp3=$(($c+$a/$b))
 exp4=$(($a%$b+$c))
 
-declare  -A  Expression
-
+declare  -A  Expressions
 Expressions=( ["exp1"]=$exp1 ["exp2"]=$exp2 ["exp3"]=$exp3 ["exp4"]=$exp4)
-echo "${Expressions[@]}"
+sorted=`printf '%s\n' "${Expressions[@]}" | sort -nr`
+echo $sorted
