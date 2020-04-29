@@ -5,4 +5,6 @@ read -p "Enter c value" c
 exp1=$(($a+$b*$c))
 exp2=$(($a*$b+$c))
 exp3=`echo $a | awk "{exp3=$1+$a/$b printf %f; exp3}"`
+exp4=$(($a%$b+$c))
+
 
