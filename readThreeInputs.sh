@@ -4,7 +4,10 @@ read -p "Enter b value" b
 read -p "Enter c value" c
 exp1=$(($a+$b*$c))
 exp2=$(($a*$b+$c))
-exp3=`echo $a | awk "{exp3=$1+$a/$b printf %f; exp3}"`
+exp3=$(($c+$a/$b))
 exp4=$(($a%$b+$c))
 
+declare  -A  Expression
 
+Expressions=( ["exp1"]=$exp1 ["exp2"]=$exp2 ["exp3"]=$exp3 ["exp4"]=$exp4)
+echo "${Expressions[@]}"
