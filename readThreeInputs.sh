@@ -9,5 +9,5 @@ exp4=$(($a%$b+$c))
 
 declare  -A  Expressions
 Expressions=( ["exp1"]=$exp1 ["exp2"]=$exp2 ["exp3"]=$exp3 ["exp4"]=$exp4)
-sorted=`printf '%s\n' "${Expressions[@]}" | sort -nr`
-echo $sorted
+descendingOrder=`printf '%s\n' "${Expressions[@]}" | sort -nr`
+AscendingOrder=`printf '%s\n' "${Expressions[@]}" | sort -n`
